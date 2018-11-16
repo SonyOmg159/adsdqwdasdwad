@@ -22,19 +22,23 @@ client.on('ready', () => {
 
 
 
-const devs = ['200644160179535872' , '507260598082338837' , '' , ''];
-          const adminprefix = "M";
-          client.on('message', message => {
-              var argresult = message.content.split(` `).slice(1).join(' ');
-                if (!devs.includes(message.author.id)) return;
-
-            if (message.content.startsWith(adminprefix + '=')) {
-              client.user.setGame(argresult, "https://www.twitch.tv/ Minecraft|Gamers");
-                message.channel.sendMessage(`**✅   ${argresult}**`)
-            }
-            });
-
-
+   // var s = ['','483063446376677386','483063378726879232','483063354332545045','483063463179190293'];
+	   var s = ['','480169573530861578','483055655800930315'];
+		setInterval(function (){
+		client.user.setPresence({
+	 game: { 
+		type: 1,
+		 url: 'https://www.twitch.tv/skwadraa',
+		name: 'BYE REVENG :(',
+		application_id: '492724279788437515',
+		 assets: {
+			 large_image:   `${s[Math.floor(Math.random() * s.length)]}`,
+	  
+		}
+	  }
+		});
+		}, 5000);
+	});
 
 
 
