@@ -122,7 +122,7 @@ const prefix = "!";
   .addField("User:",  `[ + ${user.tag} + ]`)
   .addField("By:", `[  + ${message.author.tag} +  ]`)
   .addField("Reason:", `[ + ${reason} +  ]`)
-  client.channels.get("آي دي روم اللوق").send({embed : banembed})
+  client.channels.get("512443140024696883").send({embed : banembed})
 }
 });
 
@@ -133,13 +133,13 @@ var ss = 0;
 client.on('voiceStateUpdate', (o,n) => {
     if (o.voiceChannel && !n.voiceChannel) {
         ss-=1
-        n.guild.channels.get("أيدي الروم").edit({
+        n.guild.channels.get("512453866365911040").edit({
             name : "Voice Online : [" + ss+ "]"
         })
     };
     if (n.voiceChannel && !o.voiceChannel) {
         ss+=1
-        n.guild.channels.get("أيدي الروم").edit({
+        n.guild.channels.get("512453866365911040").edit({
             name : "Voice Online : [" + ss+ "]"
         })
     }
@@ -149,11 +149,11 @@ client.on("ready", () => {
         if (m.voiceChannel) {
             ss+=1
         };
-        client.channels.get("ايدي الروم").edit({
+        client.channels.get("512453866365911040").edit({
             name : "Voice Online : [" + ss+ "]"
         })
     });
-    client.user.setGame("Mine   Craft ", "https://twitch.tv/©");
+    client.user.setGame("Mine © Craft ", "https://twitch.tv/©");
 });
 
 
